@@ -1,11 +1,28 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import SectionInicio from "../components/section-inicio.astro";
+import SectionAbout from "../components/section-about.astro";
+import TechLeng from "../components/tech&leng.astro";
+import Cards from "../components/cards.astro";
+import Contacto from "../components/contacto.astro";
+import Footer from "../components/footer.astro";
+import { PageLoader } from "@/components/animations/PageLoader";
+import { ScrollVelocity } from "@/components/animations/ScrollVelocity";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="gl0wxyz | Portafolio">
+  <main class="min-h-screen w-full">
+    <PageLoader client:load/>
+    <SectionInicio />
+
+    <ScrollVelocity text="gl0w's • Portafolio • glow's • Portafolio" client:load />
+    <ScrollVelocity text="gl0w's • Portafolio • gl0w's • Portafolio" baseVelocity={-2} client:load />
+    
+    <SectionAbout />
+    <TechLeng />
+    <Cards />
+    <Contacto />
+  </main>
+  
+  <Footer />
 </Layout>

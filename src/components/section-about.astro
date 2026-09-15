@@ -1,0 +1,108 @@
+---
+import { EncryptedText } from "./ui/encrypted-text";
+import { FadeRight } from "./animations/FadeRight";
+import { FadeUp } from "./animations/FadeUp";
+---
+
+<section id="about" class="bg-trasparent text-white py-24">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <hr class="my-6 border-gray-200 dark:border-gray-700" />
+    
+    <EncryptedText
+      text="> CONÓCEME"
+      client:visible
+      className="text-xs block text-gray-500 tracking-widest uppercase font-bold mb-4"
+      revealDelayMs={120}
+    />
+
+    <slot />
+
+    <EncryptedText
+      text="Sobre Mí"
+      client:visible
+      className="text-5xl block text-white tracking-widest font-bold mb-4"
+      revealDelayMs={120}
+    />
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+      <div class="lg:col-span-5">
+        <FadeRight client:visible delay={0.2}>
+          <img
+            class="object-cover w-full h-[550px] rounded-[2rem] shadow-2xl"
+            src="/img/lainyo.webp"
+            alt="Foto Iván"
+            draggable="false"
+            style="pointer-events: none; user-select: none;"
+          />
+        </FadeRight>
+      </div>
+
+      <div class="lg:col-span-7 flex flex-col justify-center">
+        <FadeUp client:visible delay={0.4}>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+            <div>
+              <h3 class="text-xl font-bold mb-4 pb-4 border-b border-gray-800">
+                > ¿Quién Soy?
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Soy un desarrollador Full Stack con experiencia en el diseño y
+                desarrollo de plataformas web utilizando Node.js, JavaScript,
+                Astro, TailwindCSS, TypeScript, Django y MySQL. Cuento con
+                habilidades para crear API REST, e integrar servicios de terceros.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-4 pb-4 border-b border-gray-800">
+                > Mi Aporte
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Me comprometo a ofrecer soluciones eficientes, fáciles de
+                administrar y escalables mediante las mejores prácticas de
+                desarrollo de software (best software development practices).
+              </p>
+            </div>
+          </div>
+        </FadeUp>
+
+        <FadeUp client:visible delay={0.6}>
+          <div>
+            <div class="text-xl font-bold mb-4 pb-4 border-b border-gray-800">
+              <h3 class="text-xl font-bold"> > Detalles Personales</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-6">
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">
+                  Nombre
+                </p>
+                <p class="font-bold text-gray-200">
+                  Iván Ignacio Sepulveda Iturrieta
+                </p>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">
+                  N° Celular
+                </p>
+                <p class="font-bold text-gray-200">+56 9 3548 8557</p>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">
+                  Educación
+                </p>
+                <p class="font-bold text-gray-200">
+                  Duoc UC Alameda (2023 - actualmente)
+                </p>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">
+                  Correo
+                </p>
+                <a class="font-bold text-gray-200">ignaacio.ivan@pm.me</a>
+              </div>
+            </div>
+          </div>
+        </FadeUp>
+      </div>
+    </div>
+  </div>
+</section>

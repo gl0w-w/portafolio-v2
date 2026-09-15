@@ -1,0 +1,142 @@
+---
+import {
+  FaEnvelope,
+  FaWhatsapp,
+  FaDiscord,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
+import { EncryptedText } from "./ui/encrypted-text";
+---
+
+<section id="contacto" class="bg-trasparent text-white py-24">
+  <div class="container px-6 py-12 mx-auto max-w-6xl oculto-scroll">
+    <div class="lg:flex lg:items-center">
+      <div class="lg:w-1/2 lg:mx-6">
+
+        <EncryptedText
+          text="> Mantengamos el contacto"
+          client:visible
+          className="text-xs tracking-widest uppercase text-gray-500 mb-1"
+          revealDelayMs={30}
+        />
+
+        <h1
+          class="text-4xl font-bold text-white capitalize lg:text-5xl mb-8"
+          style="padding-top: 1.5rem;"
+        >
+          Contáctame
+        </h1>
+
+        <div class="space-y-6">
+          <p class="flex items-center gap-4 group">
+            <FaGithub
+              className="text-3xl text-gray-400 group-hover:text-white transition-colors"
+            />
+            <a
+              class="text-gray-400 text-lg group-hover:text-white transition-colors"
+              href="https://github.com/gl0w-w"
+              target="_blank">GitHub | gl0w-w.</a
+            >
+          </p>
+          <p class="flex items-center gap-4 group">
+            <FaEnvelope
+              className="text-3xl text-gray-400 group-hover:text-white transition-colors"
+            />
+            <a
+              class="text-gray-400 text-lg group-hover:text-white transition-colors"
+              href="mailto:ignaacio.ivan@pm.me">Email | ignaacio.ivan@pm.me.</a
+            >
+          </p>
+          <p class="flex items-center gap-4 group">
+            <FaWhatsapp
+              className="text-3xl text-gray-400 group-hover:text-white transition-colors"
+            />
+            <a
+              class="text-gray-400 text-lg group-hover:text-white transition-colors"
+              href="https://wa.me/56935488557"
+              target="_blank">WhatsApp | 9 3548 8557.</a
+            >
+          </p>
+          <p class="flex items-center gap-4 group">
+            <FaLinkedin
+              className="text-3xl text-gray-400 group-hover:text-white transition-colors"
+            />
+            <a
+              class="text-gray-400 text-lg group-hover:text-white transition-colors"
+              href="https://www.linkedin.com/in/gl0w-w/"
+              target="_blank">LinkedIn | Iván Ignacio S.</a
+            >
+          </p>
+          <p class="flex items-center gap-4 group">
+            <FaDiscord
+              className="text-3xl text-gray-400 group-hover:text-white transition-colors"
+            />
+            <a
+              class="text-gray-400 text-lg group-hover:text-white transition-colors"
+              href="https://discord.com/334231856159522818"
+              target="_blank">Discord | gl0w_w.</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-12 lg:w-1/2 lg:mx-6 lg:mt-0">
+        <div
+          class="w-full px-8 py-10 mx-auto overflow-hidden bg-white/5 backdrop-blur-xl border boder-white/10 border border-gray-800 rounded-2xl shadow-2xl"
+        >
+          <h1 class="text-2xl font-bold text-white mb-6">Envíame un mensaje</h1>
+
+          <form
+            action="https://formsubmit.co/ignaacio.ivan@gmail.com"
+            method="POST"
+          >
+            <div class="flex-1">
+              <label class="block mb-2 text-sm text-gray-400"
+                >Nombre Completo</label
+              >
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Ej. Juan Carlos"
+                required
+                class="block w-full px-5 py-4 mt-2 text-white placeholder-gray-500 bg-white/5 border border-white/10 rounded-2xl focus:border-white focus:ring-3 focus:ring-white/20 focus:bg-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 outline-none"
+              />
+            </div>
+
+            <div class="flex-1 mt-6">
+              <label class="block mb-2 text-sm text-gray-400"
+                >Correo Electrónico</label
+              >
+              <input
+                type="email"
+                name="email"
+                placeholder="juan@ejemplo.com"
+                required
+                class="block w-full px-5 py-4 mt-2 text-white placeholder-gray-500 bg-white/5 border border-white/10 rounded-2xl focus:border-white focus:ring-3 focus:ring-white/20 focus:bg-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 outline-none"
+              />
+            </div>
+
+            <div class="w-full mt-6">
+              <label class="block mb-2 text-sm text-gray-400">Mensaje</label>
+              <textarea
+                name="mensaje"
+                required
+                class="block w-full px-5 py-4 mt-2 text-white placeholder-gray-500 bg-white/5 border border-white/10 rounded-2xl focus:border-white focus:ring-3 focus:ring-white/20 focus:bg-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 outline-none"
+                placeholder="¡Hola! Me encanta tu portafolio..."></textarea>
+            </div>
+
+            <input type="hidden" name="_captcha" value="true" />
+
+            <button
+              type="submit"
+              class="w-full px-6 py-3 mt-6 text-sm font-bold text-black transition-all duration-300 bg-white rounded-full hover:bg-gray-300 hover:- translate-y-1"
+            >
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

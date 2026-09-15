@@ -1,0 +1,113 @@
+---
+import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { TypewriterEffect } from "../components/ui/typewriter-effect";
+import { FadeRight } from "../components/animations/FadeRight";
+import { FadeLeft } from "../components/animations/FadeLeft";
+
+const misPalabras = [
+  { text: "Hola!," },
+  { text: "Soy" },
+  { text: "Iván.", className: "text-white" },
+];
+---
+
+<section id="inicio" class="pt-32 pb-24 bg-transparent">
+  <div class="container px-6 py-10 mx-auto oculto-scroll">
+    <div class="lg:flex lg:items-center lg:-mx-10">
+      <div class="lg:w-1/2 lg:mx-10">
+        
+        <TypewriterEffect
+          words={misPalabras}
+          className="text-left text-2xl lg:text-6xl"
+          client:load
+        />
+
+        <p
+          class="mt-2 font-semibold text-white capitalize dark:text-white lg:text-3xl"
+        >
+          Un intento de desarrollador full stack.
+        </p>
+
+        <p class="mt-6 text-gray-500 dark:text-gray-400 lg:text-2xl">
+          ¡Hola! Me encanta programar y experimentar con ideas nuevas. Para mí,
+          cada línea de código es una forma de aportar algo útil y genial al
+          mundo digital.
+        </p>
+
+        <div class="mt-12">
+          <div class="flex flex-col sm:flex-row gap-4 mt-10">
+            <a
+              href="#proyectos"
+              class="w-full sm:w-auto text-center font-bold tracking-wide text-black capitalize bg-white rounded-xl transition-all duration-300 px-8 py-3.5 ring-2 ring-white
+  ring-opacity-40 hover:scale-105 hover:-translate-y-1 shadow-lg shadow-white/10"
+            >
+              Proyectos &rarr;
+            </a>
+
+            <a
+              href="/CV_Sepulveda_Iván.pdf"
+              download="CV_Ivan_Sepulveda.pdf"
+              class="w-full sm:w-auto text-center font-bold tracking-wide text-white capitalize bg-black rounded-xl transition-all duration-300 px-8 py-3.5 ring-2 ring-white
+  ring-opacity-40 hover:ring-white hover:scale-105 hover:-translate-y-1"
+            >
+              Descargar CV &darr;
+            </a>
+          </div>
+
+          <hr class="my-6 border-gray-200 dark:border-gray-700" />
+          <div class="mt-6 w-80 md:mt-8">
+            <h3 class="text-white text-xl font-bold mb-4">Contáctame!</h3>
+            <div class="mt-6 w-80 md:mt-8">
+              <div class="flex mt-4 gap-4">
+                <a
+                  href="https://instagram.com/gl0.w_w"
+                  target="_blank"
+                  class="flex items-center justify-center w-12 h-12 bg-black text-white rounded-lg transition-all
+            duration-300 ring-2 ring-white ring-opacity-40 hover:ring-opacity-100 hover:scale-110 hover:-translate-y-1"
+                >
+                  <FaInstagram className="text-2xl" />
+                </a>
+
+                <a
+                  href="https://github.com/gl0w-w?tab=repositories"
+                  target="_blank"
+                  class="flex items-center justify-center w-12 h-12 bg-black text-white rounded-lg transition-all
+          duration-300 ring-2 ring-white ring-opacity-40 hover:ring-opacity-100 hover:scale-110 hover:-translate-y-1"
+                >
+                  <FaGithub className="text-2xl" />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/gl0w-w/"
+                  target="_blank"
+                  class="flex items-center justify-center w-12 h-12 bg-black text-white rounded-lg transition-all
+            duration-300 ring-2 ring-white ring-opacity-40 hover:ring-opacity-100 hover:scale-110 hover:-translate-y-1"
+                >
+                  <FaLinkedinIn className="text-2xl" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-6 border-gray-200 dark:border-gray-700" />
+
+          <div class="w-full mt-4"></div>
+        </div>
+      </div>
+
+      <div
+        class="mt-12 lg:flex lg:mt-0 lg:flex-col lg:items-center lg:w-1/2 lg:mx-10"
+      >
+        <FadeLeft client:visible delay={0.5}>
+          <img
+            class="hidden object-cover mx-auto rounded-full lg:block shrink-0 w-96 h-96"
+            draggable="false"
+            style="pointer-events: none; user-select: none;"
+            src="/img/yo.webp"
+            alt=""
+          />
+        </FadeLeft>
+      </div>
+    </div>
+  </div>
+</section>

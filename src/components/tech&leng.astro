@@ -1,0 +1,133 @@
+---
+import { FadeUp } from "./animations/FadeUp";
+import { EncryptedText } from "./ui/encrypted-text";
+---
+
+<section id="tecno" class="bg-transparent py-24 text-white">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <EncryptedText
+      text="> HABILIDADES"
+      client:visible
+      className="text-xs block tracking-widest uppercase font-bold mb-4 text-gray-500"
+      revealDelayMs={120}
+    />
+    <EncryptedText
+      text="Stack Tecnologíco"
+      client:visible
+      className="text-5xl block text-white tracking-widest font-bold mb-4"
+      revealDelayMs={100}
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8" style="padding-top: 2.0rem;">
+     <FadeUp client:visible delay={0.3}>
+        <div
+          class="bg-[#1a1a1a] rounded-3xl p-8 border border-white/10 hover:border-white/30 hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.1)]
+  transition-all duration-300 group"
+        >
+          <h3
+            class="text-2xl font-bold mb-6 text-white group-hover:text-[#38BDF8] transition-colors"
+          >
+            FrontEnd
+          </h3>
+          <div class="flex flex-wrap gap-4"
+          >
+            <i
+              class="fa-brands fa-react text-4xl text-gray-400 hover:text-[#61DAFB] transition-colors cursor-pointer"
+              title="React"></i>
+            <i
+              class="devicon-tailwindcss-plain text-4xl text-gray-400 hover:text-[#38B2AC] transition-colors cursor-pointer"
+              title="Tailwind       
+  CSS"></i>
+            <i
+              class="fa-brands fa-html5 text-4xl text-gray-400 hover:text-[#E34F26] transition-colors cursor-pointer"
+              title="HTML5"></i>
+            <i
+              class="devicon-css3-plain text-4xl text-gray-400 hover:text-[#1572B6] transition-colors cursor-pointer"
+              title="CSS3"></i>
+            <i
+              class="fa-brands fa-angular text-4xl text-gray-400 hover:text-[#DD0031] transition-colors cursor-pointer"
+              title="Angular"></i>
+          </div>
+        </div>
+      </FadeUp>
+
+      <FadeUp client:visible delay={0.3}>
+        <div
+          class="bg-[#1a1a1a] rounded-3xl p-8 border border-white/10 hover:border-white/30 hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.1)]
+  transition-all duration-300 group"
+        >
+          <h3
+            class="text-2xl font-bold mb-6 text-white group-hover:text-[#A78BFA] transition-colors"
+          >
+            BackEnd
+          </h3>
+          <div class="flex flex-wrap gap-4">
+            <i
+              class="fa-brands fa-node-js text-4xl text-gray-400 hover:text-[#339933] transition-colors cursor-pointer"
+              title="Node.js"></i>
+            <i
+              class="devicon-fastapi-plain text-4xl text-gray-400 hover:text-[#009688] transition-colors cursor-pointer"
+              title="FastAPI"></i>
+            <i
+              class="devicon-django-plain text-4xl text-gray-400 hover:text-[#092E20] transition-colors cursor-pointer"
+              title="Django"></i>
+            <i
+              class="fa-brands fa-python text-4xl text-gray-400 hover:text-[#3776AB] transition-colors cursor-pointer"
+              title="Python"></i>
+          </div>
+        </div>
+      </FadeUp>
+
+      <FadeUp client:visible delay={0.4}>
+        <div
+          class="bg-[#1a1a1a] rounded-3xl p-8 border border-white/10 hover:border-white/30 hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.1)]
+  transition-all duration-300 group"
+        >
+          <h3
+            class="text-2xl font-bold mb-6 text-white group-hover:text-[#34D399] transition-colors"
+          >
+            Databases
+          </h3>
+          <div class="flex flex-wrap gap-4">
+            <i
+              class="devicon-mysql-plain text-4xl text-gray-400 hover:text-[#4479A1] transition-colors cursor-pointer"
+              title="MySQL"></i>
+            <i
+              class="devicon-postgresql-plain text-4xl text-gray-400 hover:text-[#336791] transition-colors cursor-pointer"
+              title="PostgreSQL"></i>
+            <i
+              class="devicon-sqlite-plain text-4xl text-gray-400 hover:text-[#003B57] transition-colors cursor-pointer"
+              title="SQLite"></i>
+          </div>
+        </div>
+      </FadeUp>
+
+      <FadeUp client:visible delay={0.5}>
+        <div
+          class="bg-[#1a1a1a] rounded-3xl p-8 border border-white/10 hover:border-white/30 hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.1)]
+  transition-all duration-300 group"
+        >
+          <h3
+            class="text-2xl font-bold mb-6 text-white group-hover:text-[#FB923C] transition-colors"
+          >
+            DevOps
+          </h3>
+          <div class="flex flex-wrap gap-4">
+            <i
+              class="fa-brands fa-docker text-4xl text-gray-400 hover:text-[#2496ED] transition-colors cursor-pointer"
+              title="Docker"></i>
+            <i
+              class="devicon-linux-plain text-4xl text-gray-400 hover:text-[#FCC624] transition-colors cursor-pointer"
+              title="Linux"></i>
+            <i
+              class="devicon-git-plain text-4xl text-gray-400 hover:text-[#F05032] transition-colors cursor-pointer"
+              title="Git"></i>
+            <i
+              class="fa-brands fa-github text-4xl text-gray-400 hover:text-white transition-colors cursor-pointer"
+              title="GitHub"></i>
+          </div>
+        </div>
+      </FadeUp>
+    </div>
+  </div>
+</section>
