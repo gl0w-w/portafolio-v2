@@ -115,7 +115,7 @@ export function ProyectosGrid() {
       id: 4,
       title: "Portafolio v2.0",
       className: "md:col-span-2",
-      thumbnail: "/img/miem.webp",
+      thumbnail: "/img/portafoliov2.webp",
       content: (
         <div>
           <h3 className="text-4xl font-bold mb-2 text-white">Portafolio v2.0</h3>

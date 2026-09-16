@@ -81,12 +81,8 @@ const ImageComponent = ({ card }: { card: Card }) => {
   opacity duration-500 pointer-events-none"
       />
       <div className="absolute bottom-4 left-6 z-20 pointer-events-none">
-        <p className="text-white font-bold text-2xl drop-shadow-md">
+        <p className="text-white font-bold text-4xl drop-shadow-md">
           {card.title}
-        </p>
-
-        <p className="text-blue-400 text-sm mt-1 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          ✨ Haz clic para explorar
         </p>
       </div>
     </>
