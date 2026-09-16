@@ -1,16 +1,22 @@
 ---
 import { ProyectosGrid } from "./ProyectosGrid";
+import { EncryptedText } from "./ui/encrypted-text";
 ---
 
 <section id="proyectos" class="bg-transparent py-24 text-white">
-  <div class="container mx-auto px-6 max-w-6xl" data-aos="fade-up">
-    <h2 class="text-xs tracking-widest uppercase text-gray-500 mb-1">
-      > Portfolio
-    </h2>
-        <h1 class="text-5xl font-bold mb-16 bg-gradient-to-r from-white to-white text-transparent bg-clip-text"
-        >
-        
-          Mis Proyectos</h1>
+  <div class="container mx-auto px-6 max-w-6xl">
+    <EncryptedText
+      text="> PORTAFOLIO"
+      client:visible
+      className="text-xs block tracking-widest uppercase font-bold mb-4 text-gray-500"
+      revealDelayMs={60}
+    />
+    <EncryptedText
+      text="Proyectos"
+      client:visible
+      className="text-5xl block text-white tracking-widest font-bold mb-4"
+      revealDelayMs={90}
+    />
 
     <ProyectosGrid client:visible />
   </div>

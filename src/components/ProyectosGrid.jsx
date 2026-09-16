@@ -46,7 +46,7 @@ export function ProyectosGrid() {
     {
       id: 2,
       title: "Ferremas",
-      className: "col-span-1",
+      className: "md:col-span-1",
       thumbnail: "/img/ferremas.webp",
       content: (
         <div>
@@ -80,7 +80,7 @@ export function ProyectosGrid() {
     {
       id: 3,
       title: "MïeM App",
-      className: "col-span-1",
+      className: "md:col-span-1",
       thumbnail: "/img/miem.webp",
       content: (
         <div>
@@ -114,7 +114,7 @@ export function ProyectosGrid() {
     {
       id: 4,
       title: "Portafolio v2.0",
-      className: "col-span-2",
+      className: "md:col-span-2",
       thumbnail: "/img/miem.webp",
       content: (
         <div>
@@ -154,8 +154,8 @@ export function ProyectosGrid() {
   ];
 
   return (
-    <div className="h-[600px] md:h-[800px] w-full">
-      <FadeUp delay={0.2} className="h-full w-full">
+    <div className="w-full">
+      <FadeUp delay={0.2} className="w-full">
         <LayoutGrid cards={proyectos} />
       </FadeUp>
     </div>

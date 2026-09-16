@@ -3,30 +3,31 @@ import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { TypewriterEffect } from "../components/ui/typewriter-effect";
 import { FadeRight } from "../components/animations/FadeRight";
 import { FadeLeft } from "../components/animations/FadeLeft";
+import { RotatingText } from "../components/animations/RotatingText";
+import { EncryptedText } from "./ui/encrypted-text";
 
-const misPalabras = [
-  { text: "Hola!," },
-  { text: "Soy" },
-  { text: "Iván.", className: "text-white" },
-];
 ---
 
 <section id="inicio" class="pt-32 pb-24 bg-transparent">
   <div class="container px-6 py-10 mx-auto oculto-scroll">
     <div class="lg:flex lg:items-center lg:-mx-10">
       <div class="lg:w-1/2 lg:mx-10">
-        
-        <TypewriterEffect
-          words={misPalabras}
-          className="text-left text-2xl lg:text-6xl"
-          client:load
+        <EncryptedText
+          text="Hola!, Soy Iván."
+          client:visible
+          className="text-left text-2xl lg:text-6xl font-bold"
+          revealDelayMs={60}
         />
 
-        <p
-          class="mt-2 font-semibold text-white capitalize dark:text-white lg:text-3xl"
+        <div
+          class="mt-4 font-semibold text-white capitalize lg:text-3xl flex flex-wrap gap-2 items-center"
         >
-          Un intento de desarrollador full stack.
-        </p>
+          <p>Un Intento de desarrollador</p>
+          <RotatingText
+            client:visible
+            words={["FrontEnd.", "BackEnd.", "FullStack.", "UX/UI."]}
+          />
+        </div>
 
         <p class="mt-6 text-gray-500 dark:text-gray-400 lg:text-2xl">
           ¡Hola! Me encanta programar y experimentar con ideas nuevas. Para mí,
@@ -38,8 +39,7 @@ const misPalabras = [
           <div class="flex flex-col sm:flex-row gap-4 mt-10">
             <a
               href="#proyectos"
-              class="w-full sm:w-auto text-center font-bold tracking-wide text-black capitalize bg-white rounded-xl transition-all duration-300 px-8 py-3.5 ring-2 ring-white
-  ring-opacity-40 hover:scale-105 hover:-translate-y-1 shadow-lg shadow-white/10"
+              class="w-full sm:w-auto flex items-center justify-center font-bold tracking-wide text-black dark:text-black capitalize bg-white dark:bg-white rounded-xl transition-all duration-300 px-8 py-3.5 ring-2 ring-white ring-opacity-40 hover:scale-105 hover:-translate-y-1 shadow-lg shadow-white/10"
             >
               Proyectos &rarr;
             </a>
